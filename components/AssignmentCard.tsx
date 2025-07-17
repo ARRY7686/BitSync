@@ -6,6 +6,7 @@ interface AssignmentCardProps {
   title: string;
   subject: string;
   dueDate: string;
+ 
 }
 
 const AssignmentCard: React.FC<AssignmentCardProps> = ({ title, subject, dueDate }) => {
