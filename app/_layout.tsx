@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar"; // ✅ Use from Expo
+import { StatusBar } from "expo-status-bar"; 
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import "./globals.css"; // ✅ assuming this is Tailwind config for Expo
+import "./globals.css"; 
 
 
 export default function RootLayout() {
