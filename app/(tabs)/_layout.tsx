@@ -1,7 +1,7 @@
+import { Tabs } from 'expo-router';
+import { FileText, Home, User } from 'lucide-react-native';
 import React from 'react';
 import { Platform, useColorScheme } from 'react-native';
-import { Tabs } from 'expo-router';
-import { Home, FileText, User } from 'lucide-react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Layout = () => {
@@ -14,19 +14,29 @@ const Layout = () => {
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: isDark ? '#60A5FA' : '#1D4ED8',
-          tabBarInactiveTintColor: isDark ? '#D1D5DB' : '#6B7280',
+          tabBarInactiveTintColor: isDark ? '#9CA3AF' : '#6B7280',
           tabBarStyle: {
             backgroundColor: isDark ? '#111827' : '#ffffff',
-            borderTopWidth: 0,
+            borderTopWidth: 1,
+            borderTopColor: isDark ? '#374151' : '#E5E7EB',
             elevation: 10,
-            height: Platform.OS === 'android' ? 70 : 60,
-            paddingBottom :Platform.OS === 'android' ? 20 : 10,
-            paddingTop: 8,
-         
+            shadowOffset: {
+              width: 0,
+              height: -2,
+            },
+            shadowOpacity: 0.1,
+            shadowRadius: 8,
+            height: Platform.OS === 'android' ? 70 : 85,
+            paddingBottom: Platform.OS === 'android' ? 20 : 30,
+            paddingTop: 10,
           },
           tabBarLabelStyle: {
             fontSize: 12,
             fontWeight: '600',
+            marginBottom: Platform.OS === 'android' ? 0 : 5,
+          },
+          tabBarIconStyle: {
+            marginBottom: Platform.OS === 'android' ? 5 : 0,
           },
         }}
       >
